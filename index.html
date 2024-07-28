@@ -1,144 +1,286 @@
-https://www.w3schools.com/howto/tryit.asp?filename=tryw3css_templates_cv&stacked=h<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
+<head>
+    <title>Ashvak's Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .skill-bar {
+            position: relative;
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
+
+        .skill-bar-fill {
+            height: 24px;
+            border-radius: 25px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 24px;
+            color: white;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+
+        .skill-bar-fill[data-default] {
+            width: attr(data-default percentage);
+        }
+
+        .skill:hover .skill-bar-fill {
+            width: attr(data-skill percentage);
+        }
+
+        .work-experience:hover, .project:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        .collapsible {
+            background: #2A9D8F; /* Updated color to match footer highlight */
+            color: #fff;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .active, .collapsible:hover {
+            background: #264653; /* Darker shade for active and hover state */
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+
+        .expanded {
+            display: block !important;
+        }
+
+        .collapsible-icon {
+            font-size: 20px;
+        }
+    </style>
+</head>
 <body class="w3-light-grey">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="./candidate_photo.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Jane Doe</h2>
-          </div>
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+        <!-- Left Column -->
+        <div class="w3-third">
+            <div class="w3-white w3-text-grey w3-card-4">
+                <div class="w3-display-container">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" style="width:100%" alt="Avatar"> <!-- Professional random picture -->
+                </div>
+                <div class="w3-container w3-text-black">
+                    <h2>Ashvak Sajidh Sheik</h2>
+                </div>
+                <div class="w3-container">
+                    <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Power BI Developer</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Toronto, Canada</p>
+                    <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ashvak777@gmail.com</p>
+                    <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+1 647-890-0982</p>
+                    <hr>
+                    <p class="w3-large"><b><i class="fa fa-certificate fa-fw w3-margin-right w3-text-teal"></i>Certifications</b></p>
+                    <p>Certified Business Analysis Professional (CBAP)</p>
+                    <p>Agile Certified Practitioner (ACP)</p>
+                    <p>Certified Power BI Developer</p>
+                    <hr>
+                    <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                    <div class="skill" data-skill="90%">
+                        <p>Power BI</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="90%">90%</div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="85%">
+                        <p>DAX</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="85%">85%</div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="80%">
+                        <p>SSIS</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="80%">80%</div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="75%">
+                        <p>Python</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="75%">75%</div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="70%">
+                        <p>Microsoft Fabric</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="70%">70%</div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="85%">
+                        <p>Data Engineering</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="85%">85%</div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="80%">
+                        <p>Azure Stack</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="80%">80%</div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="75%">
+                        <p>AWS Stack</p>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-default="75%">75%</div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div><br>
+        <!-- End Left Column -->
         </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p>
-          <hr>
-
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Adobe Photoshop</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-          </div>
-          <p>Photography</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-              <div class="w3-center w3-text-white">80%</div>
+        <!-- Right Column -->
+        <div class="w3-twothird">
+            <button class="collapsible expanded">Work Experience <i class="fa fa-minus collapsible-icon"></i></button>
+            <div class="content expanded">
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                    <div class="work-experience w3-container">
+                        <h5 class="w3-opacity"><b>Sr. Power BI Developer / RBC</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Present</h6>
+                        <p>Responsibilities include collaborating with cross-functional teams, modernizing the Social Assistance reporting platform, integrating business-driven issues into enterprise-level Power BI solutions, and more.</p>
+                        <hr>
+                    </div>
+                    <div class="work-experience w3-container">
+                        <h5 class="w3-opacity"><b>Sr. Power BI Developer / Bell</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2021 - Jul 2023</h6>
+                        <p>Responsibilities include continuous improvement of BI tools and processes, designing and deploying Power BI dashboards, integrating Power BI with Azure services, and more.</p>
+                        <hr>
+                    </div>
+                    <div class="work-experience w3-container">
+                        <h5 class="w3-opacity"><b>Power BI Developer / Scotiabank</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2020 - Oct 2021</h6>
+                        <p>Responsibilities include overseeing the transformation of Scotiabank's reporting platform, project-managing complex I&IT projects, utilizing Power BI for risk analytics, and more.</p>
+                        <hr>
+                    </div>
+                    <div class="work-experience w3-container">
+                        <h5 class="w3-opacity"><b>Power BI Developer / WSIB</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2018 - Jul 2020</h6>
+                        <p>Responsibilities include spearheading the automation of metrics reporting, designing and developing Power BI dashboards, integrating Power BI with WSIB's data repositories, and more.</p>
+                        <hr>
+                    </div>
+                    <div class="work-experience w3-container">
+                        <h5 class="w3-opacity"><b>Tableau / Power BI Developer / Scotiabank</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Sep 2018</h6>
+                        <p>Responsibilities include transforming complex business logic into database design, leading the implementation of Power BI solutions for the IFRS project, and more.</p><br>
+                    </div>
+                </div>
             </div>
-          </div>
-          <p>Illustrator</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-          <p>Media</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-          </div>
-          <br>
-
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>Spanish</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
-          </div>
-          <p>German</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-          </div>
-          <br>
+            <button class="collapsible">Projects <i class="fa fa-plus collapsible-icon"></i></button>
+            <div class="content">
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-lightbulb-o fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+                    <div class="project w3-container">
+                        <h5 class="w3-opacity"><b>Project One</b></h5>
+                        <p><a href="https://example.com/project-one" target="_blank">https://example.com/project-one</a></p>
+                        <p>Description of the project.</p>
+                        <hr>
+                    </div>
+                    <div class="project w3-container">
+                        <h5 class="w3-opacity"><b>Project Two</b></h5>
+                        <p><a href="https://example.com/project-two" target="_blank">https://example.com/project-two</a></p>
+                        <p>Description of the project.</p>
+                        <hr>
+                    </div>
+                    <div class="project w3-container">
+                        <h5 class="w3-opacity"><b>Project Three</b></h5>
+                        <p><a href="https://example.com/project-three" target="_blank">https://example.com/project-three</a></p>
+                        <p>Description of the project.</p><br>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-container w3-card w3-white">
+                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Osmania University</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Master's in Business Administration</h6>
+                    <hr>
+                </div>
+                <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Kakatiya University</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Bachelor's Degree in Commerce and Computers</h6>
+                    <hr>
+                </div>
+            </div>
+        <!-- End Right Column -->
         </div>
-      </div><br>
-
-    <!-- End Left Column -->
+    <!-- End Grid -->
     </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-          <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
-        </div>
-      </div>
-
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-          <p>Web Development! All I need to know in one place</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>London Business School</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>School of Coding</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
-        </div>
-      </div>
-
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-  <!-- End Page Container -->
+<!-- End Page Container -->
 </div>
-
 <footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <p>Find me on social media.</p>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                this.innerHTML = this.innerHTML.replace("fa-minus", "fa-plus");
+            } else {
+                content.style.display = "block";
+                this.innerHTML = this.innerHTML.replace("fa-plus", "fa-minus");
+            }
+        });
+    }
+
+    var skills = document.querySelectorAll('.skill');
+    skills.forEach(function(skill) {
+        var skillBarFill = skill.querySelector('.skill-bar-fill');
+        skillBarFill.style.width = skill.getAttribute('data-skill');
+        
+        skill.addEventListener('mouseover', function() {
+            skillBarFill.style.width = '0';
+            setTimeout(function() {
+                skillBarFill.style.width = skill.getAttribute('data-skill');
+            }, 0);
+        });
+    });
+</script>
 
 </body>
 </html>
