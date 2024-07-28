@@ -12,6 +12,21 @@
             font-family: "Roboto", sans-serif;
         }
 
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #e0e0e0; /* Light shaded border */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .profile-container {
+            padding-top: 20px; /* Add padding to move the image down */
+            text-align: center;
+        }
+
         .skill-bar {
             position: relative;
             width: 100%;
@@ -64,6 +79,10 @@
             background: #264653; /* Darker shade for active and hover state */
         }
 
+        .collapsible-icon {
+            font-size: 20px;
+        }
+
         .content {
             padding: 0 18px;
             display: none;
@@ -75,8 +94,37 @@
             display: block !important;
         }
 
-        .collapsible-icon {
-            font-size: 20px;
+        .Present-badge {
+            background-color: #2A9D8F;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            display: inline-block;
+        }
+
+        .project-tile {
+            width: 30%;
+            padding: 20px;
+            margin: 1%;
+            background-color: #f9f9f9;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: inline-block;
+            vertical-align: top;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-tile h5 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .project-tile p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
         }
     </style>
 </head>
@@ -89,11 +137,11 @@
         <!-- Left Column -->
         <div class="w3-third">
             <div class="w3-white w3-text-grey w3-card-4">
-                <div class="w3-display-container">
-                    <img src="./photo.jpeg" style="width:100%" alt="Avatar"> <!-- Professional random picture -->
+                <div class="profile-container">
+                    <img src="/photo.jpeg" class="profile-picture" alt="Avatar"> <!-- Professional random picture -->
                 </div>
                 <div class="w3-container w3-text-black">
-                    <h2>Ashvak Sheik</h2>
+                    <h2 class="w3-center">Ashvak Sheik</h2>
                 </div>
                 <div class="w3-container">
                     <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Power BI Developer</p>
@@ -102,9 +150,9 @@
                     <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+1 647-890-0982</p>
                     <hr>
                     <p class="w3-large"><b><i class="fa fa-certificate fa-fw w3-margin-right w3-text-teal"></i>Certifications</b></p>
-                    <p>Certified Business Analysis Professional (CBAP)</p>
-                    <p>Agile Certified Practitioner (ACP)</p>
-                    <p>Certified Power BI Developer</p>
+                    <p><i class="fa fa-file-text-o w3-margin-right w3-text-teal"></i>Certified Business Analysis Professional (CBAP)</p>
+                    <p><i class="fa fa-file-text-o w3-margin-right w3-text-teal"></i>Agile Certified Practitioner (ACP)</p>
+                    <p><i class="fa fa-file-text-o w3-margin-right w3-text-teal"></i>Certified Power BI Developer</p>
                     <hr>
                     <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
                     <div class="skill" data-skill="90%">
@@ -162,13 +210,12 @@
         </div>
         <!-- Right Column -->
         <div class="w3-twothird">
-            <button class="collapsible expanded">Work Experience <i class="fa fa-minus collapsible-icon"></i></button>
             <div class="content expanded">
                 <div class="w3-container w3-card w3-white w3-margin-bottom">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
                     <div class="work-experience w3-container">
                         <h5 class="w3-opacity"><b>Sr. Power BI Developer / RBC</b></h5>
-                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - Present</h6>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 - <span class="Present-badge">Present</span></h6>
                         <p>Responsibilities include collaborating with cross-functional teams, modernizing the Social Assistance reporting platform, integrating business-driven issues into enterprise-level Power BI solutions, and more.</p>
                         <hr>
                     </div>
@@ -201,22 +248,17 @@
             <div class="content">
                 <div class="w3-container w3-card w3-white w3-margin-bottom">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-lightbulb-o fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
-                    <div class="project w3-container">
-                        <h5 class="w3-opacity"><b>Project One</b></h5>
-                        <p><a href="https://example.com/project-one" target="_blank">https://example.com/project-one</a></p>
-                        <p>Description of the project.</p>
-                        <hr>
+                    <div class="project-tile">
+                        <h5>Power BI</h5>
+                        <p>Interactive dashboards and reports using Power BI.</p>
                     </div>
-                    <div class="project w3-container">
-                        <h5 class="w3-opacity"><b>Project Two</b></h5>
-                        <p><a href="https://example.com/project-two" target="_blank">https://example.com/project-two</a></p>
-                        <p>Description of the project.</p>
-                        <hr>
+                    <div class="project-tile">
+                        <h5>Python</h5>
+                        <p>Data analysis and automation scripts using Python.</p>
                     </div>
-                    <div class="project w3-container">
-                        <h5 class="w3-opacity"><b>Project Three</b></h5>
-                        <p><a href="https://example.com/project-three" target="_blank">https://example.com/project-three</a></p>
-                        <p>Description of the project.</p><br>
+                    <div class="project-tile">
+                        <h5>SQL</h5>
+                        <p>Database management and complex queries using SQL.</p>
                     </div>
                 </div>
             </div>
