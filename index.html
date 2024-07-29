@@ -103,28 +103,63 @@
             display: inline-block;
         }
 
-        .project-tile {
-            width: 30%;
-            padding: 20px;
-            margin: 1%;
-            background-color: #f9f9f9;
-            text-align: center;
-            border: 1px solid #ddd;
+        .project-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #fff;
             border-radius: 8px;
-            display: inline-block;
-            vertical-align: top;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex: 1 1 calc(33.333% - 20px); /* Adjusted width to fit within the container */
+            max-width: calc(33.333% - 20px);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .project-tile h5 {
-            margin: 10px 0;
-            font-size: 18px;
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
 
-        .project-tile p {
+        .project-card h5 {
             margin: 0;
+            padding: 16px;
+            background: #2A9D8F;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .project-card p {
+            padding: 16px;
             font-size: 14px;
             color: #555;
+        }
+
+        .project-card .project-link {
+            display: block;
+            padding: 8px 16px;
+            background: #264653;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 0 0 8px 8px;
+            transition: background 0.3s;
+        }
+
+        .project-card .project-link:hover {
+            background: #2A9D8F;
+        }
+
+        .w3-container.w3-card.w3-white.w3-margin-bottom {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensure the content fits within the container */
         }
     </style>
 </head>
@@ -249,21 +284,23 @@
                     </div>
                 </div>
             </div>
-            <button class="collapsible">Projects <i class="fa fa-plus collapsible-icon"></i></button>
-            <div class="content">
-                <div class="w3-container w3-card w3-white w3-margin-bottom">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-lightbulb-o fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
-                    <div class="project-tile">
+            <div class="w3-container w3-card w3-white w3-margin-bottom">
+                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-lightbulb-o fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+                <div class="project-section">
+                    <div class="project-card">
                         <h5>Power BI</h5>
                         <p>Interactive dashboards and reports using Power BI.</p>
+                        <a href="#" class="project-link">View Project</a>
                     </div>
-                    <div class="project-tile">
+                    <div class="project-card">
                         <h5>Python</h5>
                         <p>Data analysis and automation scripts using Python.</p>
+                        <a href="#" class="project-link">View Project</a>
                     </div>
-                    <div class="project-tile">
+                    <div class="project-card">
                         <h5>SQL</h5>
                         <p>Database management and complex queries using SQL.</p>
+                        <a href="#" class="project-link">View Project</a>
                     </div>
                 </div>
             </div>
@@ -298,23 +335,6 @@
 </footer>
 
 <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                this.innerHTML = this.innerHTML.replace("fa-minus", "fa-plus");
-            } else {
-                content.style.display = "block";
-                this.innerHTML = this.innerHTML.replace("fa-plus", "fa-minus");
-            }
-        });
-    }
-
     var skills = document.querySelectorAll('.skill');
     skills.forEach(function(skill) {
         var skillBarFill = skill.querySelector('.skill-bar-fill');
