@@ -1,0 +1,30 @@
+// SKILLS UPDATE:
+// Add these skills to the appropriate categories:
+// - Expertise in SQL for data mining/analysis in enterprise data warehouses.
+// - Proficient in Power BI for report building and data visualization.
+
+// EXPERIENCE UPDATE:
+// Company: Client	: Scotiabank
+// - Role	: Sr. Power BI/Microsoft Fabric Developer					April 2024 – December 2024
+// - Responsibilities:
+// - Designed and developed interactive Power BI dashboards for financial analytics in the banking sector.
+
+// Company: Client	: RBC
+// - Role	: Sr. Power BI/Microsoft Fabric Developer						Aug 2023 – Mar 2024
+// - Project	: US Cash Management.
+// - Responsibilities:
+
+// Company: Client	: Bell
+// - Role	: Sr. Power BI Developer	 						November 2021 – July 2023
+// - Responsibilities:
+// - Designed and developed Power BI dashboards using DAX and M Query, providing real-time insights into telecom operations and customer data.
+
+// Company: Client	: Scotiabank
+// - Role	: Sr. Power BI Developer							Aug 2020 to October 2021
+// - Project	: Constellation
+// - Responsibilities:
+
+// Company: Client	: Scotiabank
+// - Role 	: Tableau Developer/QA 							July 2017 to September 2018
+// - Project	: IFRS9 (Risk Management and System support)
+// - Responsibilities
