@@ -111,7 +111,7 @@ def generate_html_updates(sections):
     return '\n'.join(updates)
 
 def main():
-    docx_file = "Ashvak_PowerBI_Fabric_Developer.docx"
+    docx_file = "resume/Ashvak_PowerBI_Fabric_Developer.docx"
     
     if not Path(docx_file).exists():
         print(f"Error: {docx_file} not found!")
