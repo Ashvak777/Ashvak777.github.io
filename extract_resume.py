@@ -37,6 +37,7 @@ def structure_resume_data(text):
     
     lines = text.split('\n')
     current_section = None
+    current_experience = None
     
     for line in lines:
         line = line.strip()
@@ -44,7 +45,7 @@ def structure_resume_data(text):
             continue
             
         # Detect sections
-        if 'experience' in line.lower() or 'work' in line.lower():
+        if 'professional experience' in line.lower() or 'work experience' in line.lower():
             current_section = 'experience'
             continue
         elif 'education' in line.lower():
@@ -62,28 +63,74 @@ def structure_resume_data(text):
             
         # Process content based on current section
         if current_section == 'experience':
-            if 'RBC' in line or 'Bell' in line or 'Scotiabank' in line or 'WSIB' in line:
-                sections['experience'].append({
+            # Look for company/client patterns
+            if any(keyword in line.lower() for keyword in ['client:', 'company:', 'gisa', 'scotiabank', 'rbc', 'bell', 'wsib']):
+                if current_experience:
+                    sections['experience'].append(current_experience)
+                current_experience = {
                     'company': line,
-                    'details': []
-                })
-            elif sections['experience']:
-                sections['experience'][-1]['details'].append(line)
+                    'role': '',
+                    'dates': '',
+                    'responsibilities': [],
+                    'environment': ''
+                }
+            elif current_experience:
+                # Check for role and dates
+                if 'role:' in line.lower():
+                    current_experience['role'] = line
+                elif 'dates:' in line.lower() or '–' in line or '-' in line:
+                    current_experience['dates'] = line
+                elif 'environment' in line.lower():
+                    current_experience['environment'] = line
+                elif line.startswith('•') or line.startswith('-') or line.startswith('*'):
+                    current_experience['responsibilities'].append(line)
+                elif 'responsibilities:' in line.lower():
+                    continue  # Skip the header
+                else:
+                    # If it's not a responsibility bullet, it might be a continuation
+                    if current_experience['responsibilities']:
+                        current_experience['responsibilities'][-1] += ' ' + line
+                    else:
+                        current_experience['responsibilities'].append(line)
+        
         elif current_section == 'skills':
-            if any(skill in line.lower() for skill in ['power bi', 'azure', 'sql', 'python', 'fabric']):
+            if any(skill in line.lower() for skill in ['power bi', 'azure', 'sql', 'python', 'fabric', 'microsoft', 'data', 'etl']):
                 sections['skills'].append(line)
+        
         elif current_section == 'education':
-            sections['education'].append(line)
+            if any(edu in line.lower() for edu in ['university', 'college', 'degree', 'bachelor', 'master', 'certified']):
+                sections['education'].append(line)
+        
         elif current_section == 'certifications':
-            sections['certifications'].append(line)
+            if any(cert in line.lower() for cert in ['certified', 'microsoft', 'azure', 'power bi', 'fabric', 'associate']):
+                sections['certifications'].append(line)
+        
         elif current_section == 'summary':
             sections['summary'] += line + ' '
+    
+    # Add the last experience if exists
+    if current_experience:
+        sections['experience'].append(current_experience)
     
     return sections
 
 def generate_html_updates(sections):
     """Generate HTML update suggestions"""
     updates = []
+    
+    # Experience updates
+    if sections['experience']:
+        updates.append("// EXPERIENCE UPDATE:")
+        for exp in sections['experience']:
+            updates.append(f"// Company: {exp.get('company', 'N/A')}")
+            updates.append(f"// Role: {exp.get('role', 'N/A')}")
+            updates.append(f"// Dates: {exp.get('dates', 'N/A')}")
+            updates.append("// Key Responsibilities:")
+            for resp in exp.get('responsibilities', [])[:5]:  # First 5 responsibilities
+                updates.append(f"// - {resp}")
+            if exp.get('environment'):
+                updates.append(f"// Environment: {exp.get('environment')}")
+            updates.append("")
     
     # Skills updates
     if sections['skills']:
@@ -93,19 +140,17 @@ def generate_html_updates(sections):
             updates.append(f"// - {skill}")
         updates.append("")
     
-    # Experience updates
-    if sections['experience']:
-        updates.append("// EXPERIENCE UPDATE:")
-        for exp in sections['experience']:
-            updates.append(f"// Company: {exp['company']}")
-            for detail in exp['details'][:3]:  # First 3 details
-                updates.append(f"// - {detail}")
-            updates.append("")
+    # Certifications update
+    if sections['certifications']:
+        updates.append("// CERTIFICATIONS UPDATE:")
+        for cert in sections['certifications']:
+            updates.append(f"// - {cert}")
+        updates.append("")
     
     # Summary update
     if sections['summary']:
         updates.append("// SUMMARY UPDATE:")
-        updates.append(f"// {sections['summary'][:200]}...")
+        updates.append(f"// {sections['summary'][:300]}...")
         updates.append("")
     
     return '\n'.join(updates)
@@ -124,17 +169,21 @@ def main():
         print("Failed to extract text from document")
         return
     
+    # Save full text for debugging
+    with open('resume_full_text.txt', 'w', encoding='utf-8') as f:
+        f.write(text)
+    
     print("Structuring resume data...")
     sections = structure_resume_data(text)
     
     # Save structured data
-    with open('resume_data.json', 'w') as f:
-        json.dump(sections, f, indent=2)
+    with open('resume_data.json', 'w', encoding='utf-8') as f:
+        json.dump(sections, f, indent=2, ensure_ascii=False)
     
     # Generate HTML update suggestions
     updates = generate_html_updates(sections)
     
-    with open('html_updates.txt', 'w') as f:
+    with open('html_updates.txt', 'w', encoding='utf-8') as f:
         f.write(updates)
     
     print("\n" + "="*50)

@@ -3,149 +3,90 @@
   "summary": "",
   "experience": [
     {
+      "company": "Client\t: General Insurance Statistical Agency (GISA) - Regulatory Organization",
+      "role": "",
+      "dates": "Role\t: Sr. Power BI/Microsoft Fabric Developer\t\t\t\t      \tDecember 2024 – Present",
+      "responsibilities": [],
+      "environment": ""
+    },
+    {
+      "company": "Developed and automated regulatory reports using Power BI Report Builder, ensuring compliance with GISA’s statistical data reporting standards for Canadian insurance regulators.",
+      "role": "",
+      "dates": "",
+      "responsibilities": [
+        "Designed and optimized complex SQL queries and stored procedures in Teradata and Azure Synapse, enabling efficient extraction and transformation of policy and claims data for compliance audits. Created paginated and parameterized reports in Report Builder, providing insurers and regulators with detailed insights into claims trends, loss ratios, and market share distributions. Established scheduled reporting pipelines using SSRS and Power BI Service, automating the periodic submission of statistical data to regulatory authorities."
+      ],
+      "environment": ""
+    },
+    {
+      "company": "Developed and managed ETL pipelines in Azure Data Factory, integrating structured and semi-structured data from multiple insurance providers into GISA’s data warehouse.",
+      "role": "",
+      "dates": "Environment - Power BI Report Builder, SQL (Teradata, Azure Synapse, T-SQL), SSRS, Azure Data Factory, Microsoft Fabric (Dataflows, Lakehouse), Python, Microsoft Purview, Azure Active Directory, JIRA, Confluence.",
+      "responsibilities": [
+        "Implemented a centralized data governance framework using Microsoft Purview and Azure AD, ensuring secure access control, metadata management, and compliance tracking. Utilized Microsoft Fabric Dataflows and Lakehouse to modernize insurance data ingestion, improving reporting accuracy and accessibility for regulatory analysis."
+      ],
+      "environment": ""
+    },
+    {
       "company": "Client\t: Scotiabank",
-      "details": [
-        "Role\t: Sr. Power BI/Microsoft Fabric Developer\t\t\t\t\tApril 2024 \u2013 December 2024",
-        "Responsibilities:",
-        "Designed and developed interactive Power BI dashboards for financial analytics in the banking sector.",
-        "Utilized DAX and M formula for complex data modeling to provide insights into customer behavior and financial trends.",
-        "Developed a data warehouse solution using Microsoft Fabric that consolidated data from 50 sources, reducing data retrieval times by 40%",
-        "Spearheaded the migration of legacy data systems to Microsoft Fabric, resulting in a 30% increase in processing speed.",
-        "Designed custom dashboards and reports using Microsoft Fabric, providing stakeholders with actionable insights.",
-        "Implemented a Lakehouse with Microsoft Fabric for end to end Analytics",
-        "Organized and transformed data across Bronze, Silver, and Gold layers of a Lakehouse for optimized analytics in Microsoft Fabric",
-        "Use Azure Data Factory (ADF) to lift and shift SSIS packages to Azure, where they can be executed in an Azure-SSIS Integration Runtime.",
-        "Connect Azure Data Factory pipelines to Microsoft Fabric to enable data flow between on-premises data sources, cloud services, and Fabric's analytics environment.",
-        "Modify SSIS packages to interact directly with Fabric's data lakes, Synapse Analytics, or other Fabric components.",
-        "Integrated Azure Synapse, SQL, and Data Bricks for robust data warehousing solutions in banking.",
-        "Developed regular and ad-hoc financial reports for strategic planning in banking.",
-        "Led a team of BI developers in the banking sector, ensuring project alignment with business goals. Provided Power BI training and support to end-users in the banking industry.",
-        "Implemented data security measures in BI solutions to protect sensitive financial information.",
-        "Automated report generation for regulatory bodies using Power Automate.",
-        "Integrated Power Automate with multiple data sources, including SharePoint, Excel, and Azure SQL Database, to automate data collection and updates.",
-        "Implemented Azure Machine Learning models to enhance predictive analytics and business intelligence insights in the banking industry.",
-        "Utilized Python and Pandas to read large datasets from multiple file formats, including CSV, Excel, and JSON.",
-        "Performed data cleaning, filtering, aggregation, and merged datasets on common keys to ensure data consistency and accuracy.",
-        "Automated the ETL process and uploaded the final transformed datasets into Azure SQL Database for real-time analytics and reporting.",
-        "Environment \u2013 Power BI, DAX, Azure Storage, Azure Data Lake, Azure Databricks Lakehouse, Azure Synapse, Python, Power BI Gateway, Power Query, MS SQL Server 2016/2014/2012/2008 R2, MS Excel, Windows 8/10, Team Foundation, SSRS"
-      ]
+      "role": "",
+      "dates": "Environment – Power BI, DAX, Azure Storage, Azure Data Lake, Azure Databricks Lakehouse, Azure Synapse, Python, Power BI Gateway, Power Query, MS SQL Server 2016/2014/2012/2008 R2, MS Excel, Windows 8/10, Team Foundation, SSRS",
+      "responsibilities": [
+        "Designed and developed interactive Power BI dashboards for financial analytics in the banking sector. Utilized DAX and M formula for complex data modeling to provide insights into customer behavior and financial trends. Developed a data warehouse solution using Microsoft Fabric that consolidated data from 50 sources, reducing data retrieval times by 40% Spearheaded the migration of legacy data systems to Microsoft Fabric, resulting in a 30% increase in processing speed. Designed custom dashboards and reports using Microsoft Fabric, providing stakeholders with actionable insights. Implemented a Lakehouse with Microsoft Fabric for end to end Analytics Organized and transformed data across Bronze, Silver, and Gold layers of a Lakehouse for optimized analytics in Microsoft Fabric Modify SSIS packages to interact directly with Fabric's data lakes, Synapse Analytics, or other Fabric components. Integrated Azure Synapse, SQL, and Data Bricks for robust data warehousing solutions in banking. Optimized Power BI reports and dashboards for performance and user experience in banking. Implemented data security measures in BI solutions to protect sensitive financial information. Automated report generation for regulatory bodies using Power Automate. Integrated Power Automate with multiple data sources, including SharePoint, Excel, and Azure SQL Database, to automate data collection and updates. Leveraged Azure Data Factory to orchestrate and automate data workflows, ensuring seamless integration and data consistency. Implemented Azure Machine Learning models to enhance predictive analytics and business intelligence insights in the banking industry. Utilized Python and Pandas to read large datasets from multiple file formats, including CSV, Excel, and JSON. Performed data cleaning, filtering, aggregation, and merged datasets on common keys to ensure data consistency and accuracy."
+      ],
+      "environment": ""
     },
     {
       "company": "Client\t: RBC",
-      "details": [
-        "Role\t: Sr. Power BI/Microsoft Fabric Developer\t\t\t\t\t\tAug 2023 \u2013 Mar 2024",
-        "Project\t: US Cash Management.",
-        "Responsibilities:",
-        "Developed dynamic dashboards in Power BI that visualized real-time financial metrics, enabling C-level executives to make data-driven decisions based on live data.",
-        "Designed and implemented row-level security in Power BI, ensuring that sensitive financial data was securely accessed based on user roles and regulatory requirements.",
-        "Architected large-scale data pipelines using Microsoft Fabric and Azure Data Factory, enabling seamless integration of multiple data sources for comprehensive financial analysis.",
-        "Designed and implemented custom Python scripts for automating complex data transformations within Microsoft Fabric, improving the speed and accuracy of ETL processes.",
-        "Migrated on-premises databases to Azure Synapse integrated with Databricks and Microsoft Fabric, reducing operational costs and enhancing scalability for banking data solutions",
-        "Led the transition of legacy ETL systems to Azure Data Factory, leveraging Microsoft Fabric for efficient data orchestration and enhancing overall data reliability.",
-        "Collaborated with cross-functional teams to gather and analyze business requirements, translating them into detailed functional specifications and user stories.",
-        "Used Data factor and data flows pipelines in Microsoft Fabric",
-        "Assess existing SSIS packages to identify which can be migrated and which may need to be redesigned.",
-        "Implemented Collibra for effective data governance and regulatory compliance in the banking industry.",
-        "Conducted training sessions for bank staff on utilizing BI tools for data-driven decision-making.",
-        "Developed and maintained Python scripts for data extraction, transformation, and loading (ETL) processes in the banking sector.",
-        "Utilized Microsoft Fabric for scalable and efficient data processing, improving overall data pipeline performance.",
-        "Integrated Python with Power BI to create advanced data visualizations and custom analytical solutions for banking clients.",
-        "Automated the distribution of Power BI reports using Power Automate, ensuring timely delivery of key insights to business stakeholders through email and Teams integration",
-        "Automated data refresh cycles and triggered real-time alerts using Power Automate integrated with Power BI, ensuring that stakeholders received up-to-date financial reports and notifications whenever critical KPIs reached predefined thresholds.",
-        "Environment \u2013 Power BI, DAX, Azure Storage, Azure Data Lake, Azure Databricks Lakehouse, Azure Synapse, Python, Power BI Gateway, Power Query, MS SQL Server 2016/2014/2012/2008 R2, MS Excel, Windows 8/10, Team Foundation, SSRS"
-      ]
+      "role": "",
+      "dates": "Environment – Power BI, DAX, Azure Storage, Azure Data Lake, Azure Databricks Lakehouse, Azure Synapse, Python, Power BI Gateway, Power Query, MS SQL Server 2016/2014/2012/2008 R2, MS Excel, Windows 8/10, Team Foundation, SSRS",
+      "responsibilities": [
+        "Project\t: US Cash Management. Deployed and managed Power BI reports on Power BI Service, automating data refresh schedules and configuring workspaces for seamless collaboration and secure data access across departments. Designed and implemented custom Python scripts for automating complex data transformations within Microsoft Fabric, improving the speed and accuracy of ETL processes. Led the transition of legacy ETL systems to Azure Data Factory, leveraging Microsoft Fabric for efficient data orchestration and enhancing overall data reliability. Used Data factor and data flows pipelines in Microsoft Fabric Assess existing SSIS packages to identify which can be migrated and which may need to be redesigned. Implemented Azure Data Factory (ADF) pipelines to automate ETL processes, facilitating seamless data integration and workflow automation with Microsoft Fabric and Databricks. Implemented Collibra for effective data governance and regulatory compliance in the banking industry. Developed and maintained Python scripts for data extraction, transformation, and loading (ETL) processes in the banking sector. Integrated Azure Databricks and ADF with Microsoft Fabric to enhance data warehousing capabilities and streamline data processing workflows. Utilized Microsoft Fabric for scalable and efficient data processing, improving overall data pipeline performance. Integrated Python with Power BI to create advanced data visualizations and custom analytical solutions for banking clients. Automated the distribution of Power BI reports using Power Automate, ensuring timely delivery of key insights to business stakeholders through email and Teams integration Set up automated workflows using Power Automate to trigger Power BI dashboard updates and send scheduled reports to business stakeholders, ensuring consistent data accuracy and timely access to critical insights for strategic planning."
+      ],
+      "environment": ""
     },
     {
       "company": "Client\t: Bell",
-      "details": [
-        "Role\t: Sr. Power BI Developer\t \t\t\t\t\t\tNovember 2021 \u2013 July 2023",
-        "Responsibilities:",
-        "Designed and developed Power BI dashboards using DAX and M Query, providing real-time insights into telecom operations and customer data.",
-        "Automated the validation of flat files using Python scripts, reducing processing time from 3 days to just 10 minutes, significantly improving operational efficiency.",
-        "Created ETL pipelines in Azure Data Factory (ADF) to ingest and transform data from multiple sources, ensuring data consistency and accuracy for reporting.",
-        "Integrated Azure SQL Database with Power BI, ensuring seamless data flow and real-time data availability for advanced analytics and reporting.",
-        "Utilized Azure Data Factory for orchestrating data movement between on-premise and cloud data sources, ensuring smooth data integration into the Azure SQL Database.",
-        "Built custom DAX measures to perform advanced calculations and deliver key performance indicators (KPIs) within Power BI dashboards",
-        "Collaborated with cross-functional teams to gather business requirements and translate them into scalable Power BI solutions, enabling data-driven decision-making.",
-        "Spearheaded the creation of a telecom analytics platform using Power BI and Alteryx, improving data analysis.",
-        "Conducted complex data analysis using Power Query for strategic decisions in telecom.",
-        "Developed custom applications using Power Apps for real-time data interaction in telecom.",
-        "Ensured compliance with data security and privacy standards in telecom BI solutions.",
-        "Managed project timelines and deliverables for the telecom BI project.",
-        "Developed Python scripts for data transformation and analysis in telecom.",
-        "Utilized Azure Synapse to enhance data warehousing and analytics in telecom.",
-        "Leveraged Azure Data Factory for efficient data pipeline automation in telecom.",
-        "Implemented Azure Machine Learning for predictive analytics and insights in telecom.",
-        "Conducted training sessions on Power BI and Power Automate for telecom staff.",
-        "Automated customer service reporting using Power Automate in telecom.",
-        "Designed and developed real-time data analytics solutions using Python and Azure in telecom.",
-        "Leveraged Power Automate to connect Power BI dashboards with real-time data, enabling automated data refreshes and seamless reporting for stakeholders.",
-        "Environment \u2013 Power BI, DAX, Azure Storage, Azure Data Lake, Azure Databricks Lakehouse, Azure Synapse, Python, Power BI Gateway, Power Query, MS SQL Server 2016/2014/2012/2008 R2, MS Excel, Windows 8/10, Team Foundation, SSRS"
-      ]
+      "role": "",
+      "dates": "Environment – Power BI, DAX, Azure Storage, Azure Data Lake, Azure Databricks Lakehouse, Azure Synapse, Python, Power BI Gateway, Power Query, MS SQL Server 2016/2014/2012/2008 R2, MS Excel, Windows 8/10, Team Foundation, SSRS",
+      "responsibilities": [
+        "Automated the validation of flat files using Python scripts, reducing processing time from 3 days to just 10 minutes, significantly improving operational efficiency. Created ETL pipelines in Azure Data Factory (ADF) to ingest and transform data from multiple sources, ensuring data consistency and accuracy for reporting. Implemented Power Automate to streamline repetitive business processes, such as report generation and data updates, improving workflow efficiency. Developed Python scripts for data extraction, transformation, and loading (ETL), automating complex workflows and improving data quality and consistency. Built custom DAX measures to perform advanced calculations and deliver key performance indicators (KPIs) within Power BI dashboards Optimized Power BI reports and dashboards for performance, ensuring a smooth user experience while handling large datasets in telecom operations. Spearheaded the creation of a telecom analytics platform using Power BI and Alteryx, improving data analysis. Conducted complex data analysis using Power Query for strategic decisions in telecom. Ensured compliance with data security and privacy standards in telecom BI solutions. Managed project timelines and deliverables for the telecom BI project. Developed Python scripts for data transformation and analysis in telecom. Utilized Azure Synapse to enhance data warehousing and analytics in telecom. Leveraged Azure Data Factory for efficient data pipeline automation in telecom. Implemented Azure Machine Learning for predictive analytics and insights in telecom. Conducted training sessions on Power BI and Power Automate for telecom staff. Created interactive dashboards using Power BI to monitor telecom network performance. Automated customer service reporting using Power Automate in telecom."
+      ],
+      "environment": ""
     },
     {
       "company": "Client\t: Scotiabank",
-      "details": [
-        "Role\t: Sr. Power BI Developer\t\t\t\t\t\t\tAug 2020 to October 2021",
-        "Project\t: Constellation",
-        "Responsibilities:",
-        "Utilized DAX and M formula for complex data modeling to provide insights into customer behavior and financial trends.",
-        "Designed and optimized data models with Power BI Desktop, creating relationships between various data sources to build intuitive and interactive dashboards for business decision-making.",
-        "Integrated Azure Synapse and SQL for robust data warehousing solutions in banking.",
-        "Collaborated with business stakeholders in banking to gather and analyze requirements for BI strategies.",
-        "Led a team of BI developers in the banking sector, ensuring project alignment with business goals.",
-        "Provided Power BI training and support to end-users in the banking industry. Participated in the continuous improvement of BI tools and processes in banking.",
-        "Built and refined complex data models in Power BI Desktop by integrating multiple data sources, ensuring scalability and flexibility for real-time business analytics and forecasting.",
-        "Analyzed financial data to identify trends and forecast future financial performance.",
-        "Developed financial risk models in Power BI, aiding in risk assessment and mitigation strategies. Collaborated with finance departments to enhance budgeting and financial planning through BI tools.",
-        "Created compliance reports using Power BI to adhere to banking regulations and standards.",
-        "Integrated banking transaction data with BI systems for real-time fraud detection and analysis.",
-        "Built a real-time data pipeline using Power Automate to automatically ingest and process financial data from multiple sources into Power BI dashboards.",
-        "Environment \u2013 Power BI, DAX, Azure Storage, Azure Data Lake, Azure Databricks Lakehouse, Azure Synapse, Python, Power BI Gateway, Power Query, MS SQL Server 2016/2014/2012/2008 R2, MS Excel, Windows 8/10, Team Foundation, SSRS",
-        "Role \t: Power BI Developer\t\t\t\t\t\t\t\t\tOct 2018 to July 2020",
-        "Project\t: Metrics Reporting (QA Automation)",
-        "Responsibilities:",
-        "Created operational, tactical, and strategic metrics reports using Power BI to analyze test effectiveness and overall project performance.",
-        "Developed interactive Power BI dashboards to visualize claims data, improving claim processing efficiency and enabling better decision-making.",
-        "Integrated customer data from various sources, including Azure SQL Database, into a unified Power BI model for comprehensive analytics and reporting.",
-        "Utilized Python for data extraction, transformation, and loading (ETL), automating data validation and cleaning processes before pushing data to Azure SQL.",
-        "Implemented predictive models in Power BI using DAX to assess risk and forecast claim outcomes, aiding in future financial planning.",
-        "Created real-time reports in Power BI to track insurance sales performance and underwriting metrics.",
-        "Streamlined data collection and processing from IoT devices for usage-based insurance analytics, leveraging Azure Data Factory for ETL processes.",
-        "Designed KPI dashboards in Power BI for monitoring underwriting performance, risk exposure, and claims trends.",
-        "Collaborated with underwriting teams to develop data-driven strategies for risk assessment and pricing, enhancing product offerings through Python-based analytics and Power BI visualizations.",
-        "Environment \u2013 Microsoft SQL Server, JIRA, Confluence, Microsoft SQL Management Studio, Tableau Desktop 10, Tableau Server, Power BI, HP ALM, Mobaxterm 10, CA TDM, Spark, Agile methodology"
-      ]
+      "role": "",
+      "dates": "Environment – Microsoft SQL Server, JIRA, Confluence, Microsoft SQL Management Studio, Tableau Desktop 10, Tableau Server, Power BI, HP ALM, Mobaxterm 10, CA TDM, Spark, Agile methodology",
+      "responsibilities": [
+        "Role\t: Sr. Power BI Developer\t\t\t\t\t\t\tAug 2020 to October 2021 Project\t: Constellation Utilized DAX and M formula for complex data modeling to provide insights into customer behavior and financial trends. Integrated Azure Synapse and SQL for robust data warehousing solutions in banking. Collaborated with business stakeholders in banking to gather and analyze requirements for BI strategies. Led a team of BI developers in the banking sector, ensuring project alignment with business goals. Analyzed financial data to identify trends and forecast future financial performance. Developed financial risk models in Power BI, aiding in risk assessment and mitigation strategies. Collaborated with finance departments to enhance budgeting and financial planning through BI tools. Created compliance reports using Power BI to adhere to banking regulations and standards. Role \t: Power BI Developer\t\t\t\t\t\t\t\t\tOct 2018 to July 2020 Project\t: Metrics Reporting (QA Automation) Created operational, tactical, and strategic metrics reports using Power BI to analyze test effectiveness and overall project performance. Automated policy renewal and claims processing workflows using Power Automate, reducing manual efforts and streamlining processes. Integrated customer data from various sources, including Azure SQL Database, into a unified Power BI model for comprehensive analytics and reporting. Utilized Python for data extraction, transformation, and loading (ETL), automating data validation and cleaning processes before pushing data to Azure SQL. Implemented predictive models in Power BI using DAX to assess risk and forecast claim outcomes, aiding in future financial planning. Designed KPI dashboards in Power BI for monitoring underwriting performance, risk exposure, and claims trends."
+      ],
+      "environment": ""
     },
     {
       "company": "Client\t: Scotiabank",
-      "details": [
-        "Role \t: Tableau Developer/QA \t\t\t\t\t\t\tJuly 2017 to September 2018",
-        "Project\t: IFRS9 (Risk Management and System support)",
-        "Responsibilities",
-        "Transformed complex business logic into efficient SQL database designs, utilizing Stored Procedures, User Defined Functions, Views, and T-SQL scripting to maintain data integrity.",
-        "Developed and maintained robust SQL databases, ensuring accurate and consistent data management for risk reporting.",
-        "Expertly created financial and risk management reports using Tableau, delivering clear data visualizations and actionable insights to stakeholders.",
-        "Collaborated with business teams to gather and analyze data requirements, leveraging Tableau to visualize complex datasets and enhance decision-making.",
-        "Employed SQL to extract, manipulate, and analyze data from multiple sources, supporting financial risk modeling and reporting.",
-        "Combined Datameer and SQL to handle large datasets and perform advanced data preparation for Tableau visualizations.",
-        "Delivered impactful data visualizations in Tableau, simplifying complex financial data for senior management and risk teams.",
-        "Environment \u2013 PuTTy, JIRA, Confluence, Hive, DB visualizer, Datameer, Tableau Desktop 10, Tableau Server, Hadoop Lake, Hue - Hive query editor, Curl command, Mobaxterm 10, Agile methodology"
-      ]
+      "role": "",
+      "dates": "Environment – PuTTy, JIRA, Confluence, Hive, DB visualizer, Datameer, Tableau Desktop 10, Tableau Server, Hadoop Lake, Hue - Hive query editor, Curl command, Mobaxterm 10, Agile methodology",
+      "responsibilities": [
+        "Role \t: Tableau Developer/QA \t\t\t\t\t\t\tJuly 2017 to September 2018 Project\t: IFRS9 (Risk Management and System support) Responsibilities Developed and maintained robust SQL databases, ensuring accurate and consistent data management for risk reporting. Expertly created financial and risk management reports using Tableau, delivering clear data visualizations and actionable insights to stakeholders. Employed SQL to extract, manipulate, and analyze data from multiple sources, supporting financial risk modeling and reporting. Combined Datameer and SQL to handle large datasets and perform advanced data preparation for Tableau visualizations. Delivered impactful data visualizations in Tableau, simplifying complex financial data for senior management and risk teams."
+      ],
+      "environment": ""
     }
   ],
   "skills": [
     "Expertise in SQL for data mining/analysis in enterprise data warehouses.",
-    "Proficient in Power BI for report building and data visualization."
+    "Proficient in Power BI for report building and data visualization.",
+    "Skilled in presenting complex data to senior management.",
+    "Strong in data-driven decision-making and intellectual curiosity."
   ],
   "education": [
-    "Master\u2019s in Business Administration from Osmania University.",
-    "Bachelor\u2019s Degree in Commerce and Computers from Kakatiya University.",
+    "Master’s in Business Administration from Osmania University.",
+    "Bachelor’s Degree in Commerce and Computers from Kakatiya University.",
     "Microsoft Certified Power BI Developer",
     "Microsoft Certified Fabric Data Engineer",
     "Microsoft Certified Power Automate RPA Developer",
     "Microsoft Certified: Azure AI Engineer Associate",
-    "Certified Secret Security Level II Clearance \u2013 Government of Canada"
+    "Certified Secret Security Level II Clearance – Government of Canada"
   ],
   "certifications": [
     "Agile Certified Practitioner (ACP)",
